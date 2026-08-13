@@ -1,0 +1,271 @@
+edubridge/
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── apps/
+│   ├── mobile/
+│   │   ├── assets/
+│   │   │   ├── fonts/
+│   │   │   │   └── .gitkeep
+│   │   │   ├── icons/
+│   │   │   │   └── .gitkeep
+│   │   │   └── images/
+│   │   │       └── .gitkeep
+│   │   ├── src/
+│   │   │   ├── components/
+│   │   │   │   ├── common/
+│   │   │   │   │   ├── Avatar.tsx
+│   │   │   │   │   ├── Badge.tsx
+│   │   │   │   │   ├── Button.tsx
+│   │   │   │   │   ├── Card.tsx
+│   │   │   │   │   ├── ProgressBar.tsx
+│   │   │   │   │   └── ThemeToggle.tsx
+│   │   │   │   └── layout/
+│   │   │   │       ├── BottomTabBar.tsx
+│   │   │   │       ├── ScreenContainer.tsx
+│   │   │   │       └── TopBar.tsx
+│   │   │   ├── context/
+│   │   │   │   ├── AuthContext.tsx
+│   │   │   │   └── UserContext.tsx
+│   │   │   ├── hooks/
+│   │   │   │   ├── useAuth.ts
+│   │   │   │   └── useDashboardData.ts
+│   │   │   ├── navigation/
+│   │   │   │   ├── AuthStack.tsx
+│   │   │   │   ├── BottomTabNavigator.tsx
+│   │   │   │   ├── RootNavigator.tsx
+│   │   │   │   └── types.ts
+│   │   │   ├── screens/
+│   │   │   │   ├── Assessments/
+│   │   │   │   │   ├── components/
+│   │   │   │   │   │   ├── AssessmentAttempt.tsx
+│   │   │   │   │   │   └── AssessmentResult.tsx
+│   │   │   │   │   └── AssessmentsScreen.tsx
+│   │   │   │   ├── Auth/
+│   │   │   │   │   ├── components/
+│   │   │   │   │   │   └── AuthForm.tsx
+│   │   │   │   │   ├── GetStartedScreen.tsx
+│   │   │   │   │   └── LoginScreen.tsx
+│   │   │   │   ├── Calendar/
+│   │   │   │   │   ├── components/
+│   │   │   │   │   │   └── EventItem.tsx
+│   │   │   │   │   └── CalendarScreen.tsx
+│   │   │   │   ├── Community/
+│   │   │   │   │   ├── components/
+│   │   │   │   │   │   └── PostFeed.tsx
+│   │   │   │   │   └── CommunityScreen.tsx
+│   │   │   │   ├── Dashboard/
+│   │   │   │   │   ├── components/
+│   │   │   │   │   │   ├── ContinueLearningList.tsx
+│   │   │   │   │   │   ├── GreetingHeader.tsx
+│   │   │   │   │   │   ├── OverallProgressCard.tsx
+│   │   │   │   │   │   └── UpcomingList.tsx
+│   │   │   │   │   └── DashboardScreen.tsx
+│   │   │   │   ├── Messages/
+│   │   │   │   │   ├── components/
+│   │   │   │   │   │   ├── ChatWindow.tsx
+│   │   │   │   │   │   └── ConversationList.tsx
+│   │   │   │   │   └── MessagesScreen.tsx
+│   │   │   │   ├── MyLearning/
+│   │   │   │   │   ├── components/
+│   │   │   │   │   │   └── TopicList.tsx
+│   │   │   │   │   └── MyLearningScreen.tsx
+│   │   │   │   ├── Reports/
+│   │   │   │   │   ├── components/
+│   │   │   │   │   │   └── TermReportCard.tsx
+│   │   │   │   │   └── ReportsScreen.tsx
+│   │   │   │   ├── Resources/
+│   │   │   │   │   ├── components/
+│   │   │   │   │   │   └── ResourceList.tsx
+│   │   │   │   │   └── ResourcesScreen.tsx
+│   │   │   │   ├── Settings/
+│   │   │   │   │   ├── components/
+│   │   │   │   │   │   └── ThemeSettings.tsx
+│   │   │   │   │   └── SettingsScreen.tsx
+│   │   │   │   └── Welcome/
+│   │   │   │       ├── components/
+│   │   │   │       │   ├── FeatureList.tsx
+│   │   │   │       │   └── HeroSection.tsx
+│   │   │   │       └── WelcomeScreen.tsx
+│   │   │   ├── services/
+│   │   │   │   └── apiClient.ts
+│   │   │   ├── theme/
+│   │   │   │   ├── dark.ts
+│   │   │   │   ├── light.ts
+│   │   │   │   ├── ThemeProvider.tsx
+│   │   │   │   └── useTheme.ts
+│   │   │   ├── types/
+│   │   │   │   └── index.ts
+│   │   │   └── utils/
+│   │   │       ├── constants.ts
+│   │   │       └── formatDate.ts
+│   │   ├── .env.example
+│   │   ├── app.json
+│   │   ├── App.tsx
+│   │   ├── babel.config.js
+│   │   ├── index.ts
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── tsconfig.json
+│   └── web/
+│       ├── public/
+│       │   ├── assets/
+│       │   │   ├── icons/
+│       │   │   └── images/
+│       │   └── favicon.ico
+│       ├── src/
+│       │   ├── assets/
+│       │   │   ├── icons/
+│       │   │   │   └── .gitkeep
+│       │   │   └── images/
+│       │   │       └── .gitkeep
+│       │   ├── components/
+│       │   │   ├── common/
+│       │   │   │   ├── Avatar.tsx
+│       │   │   │   ├── Badge.tsx
+│       │   │   │   ├── Button.tsx
+│       │   │   │   ├── Card.tsx
+│       │   │   │   ├── NotificationBell.tsx
+│       │   │   │   ├── ProgressBar.tsx
+│       │   │   │   ├── SearchInput.tsx
+│       │   │   │   └── ThemeToggle.tsx
+│       │   │   └── layout/
+│       │   │       ├── DashboardLayout.tsx
+│       │   │       ├── PublicLayout.tsx
+│       │   │       ├── Sidebar.tsx
+│       │   │       └── Topbar.tsx
+│       │   ├── context/
+│       │   │   ├── AuthContext.tsx
+│       │   │   └── UserContext.tsx
+│       │   ├── features/
+│       │   │   ├── assessments/
+│       │   │   │   ├── components/
+│       │   │   │   │   ├── AssessmentAttempt.tsx
+│       │   │   │   │   ├── AssessmentList.tsx
+│       │   │   │   │   └── AssessmentResult.tsx
+│       │   │   │   └── AssessmentsPage.tsx
+│       │   │   ├── auth/
+│       │   │   │   ├── components/
+│       │   │   │   │   └── AuthForm.tsx
+│       │   │   │   ├── GetStartedPage.tsx
+│       │   │   │   └── LoginPage.tsx
+│       │   │   ├── calendar/
+│       │   │   │   ├── components/
+│       │   │   │   │   ├── CalendarView.tsx
+│       │   │   │   │   └── EventItem.tsx
+│       │   │   │   └── CalendarPage.tsx
+│       │   │   ├── community/
+│       │   │   │   ├── components/
+│       │   │   │   │   ├── PostFeed.tsx
+│       │   │   │   │   └── StudyGroupCard.tsx
+│       │   │   │   └── CommunityPage.tsx
+│       │   │   ├── dashboard/
+│       │   │   │   ├── components/
+│       │   │   │   │   ├── AchievementsCard.tsx
+│       │   │   │   │   ├── ContinueLearningList.tsx
+│       │   │   │   │   ├── GreetingHeader.tsx
+│       │   │   │   │   ├── MySubjectsCard.tsx
+│       │   │   │   │   ├── OverallProgressCard.tsx
+│       │   │   │   │   └── UpcomingList.tsx
+│       │   │   │   └── DashboardPage.tsx
+│       │   │   ├── messages/
+│       │   │   │   ├── components/
+│       │   │   │   │   ├── ChatWindow.tsx
+│       │   │   │   │   └── ConversationList.tsx
+│       │   │   │   └── MessagesPage.tsx
+│       │   │   ├── my-learning/
+│       │   │   │   ├── components/
+│       │   │   │   │   ├── TopicDetail.tsx
+│       │   │   │   │   └── TopicList.tsx
+│       │   │   │   └── MyLearningPage.tsx
+│       │   │   ├── reports/
+│       │   │   │   ├── components/
+│       │   │   │   │   └── TermReportCard.tsx
+│       │   │   │   └── ReportsPage.tsx
+│       │   │   ├── resources/
+│       │   │   │   ├── components/
+│       │   │   │   │   └── ResourceList.tsx
+│       │   │   │   └── ResourcesPage.tsx
+│       │   │   ├── settings/
+│       │   │   │   ├── components/
+│       │   │   │   │   ├── ProfileSettings.tsx
+│       │   │   │   │   └── ThemeSettings.tsx
+│       │   │   │   └── SettingsPage.tsx
+│       │   │   └── welcome/
+│       │   │       ├── components/
+│       │   │       │   ├── FeatureList.tsx
+│       │   │       │   ├── HeroSection.tsx
+│       │   │       │   ├── NavBar.tsx
+│       │   │       │   └── StatsStrip.tsx
+│       │   │       └── WelcomePage.tsx
+│       │   ├── hooks/
+│       │   │   ├── useAuth.ts
+│       │   │   ├── useDashboardData.ts
+│       │   │   └── useMediaQuery.ts
+│       │   ├── routes/
+│       │   │   ├── AppRouter.tsx
+│       │   │   ├── ProtectedRoute.tsx
+│       │   │   └── routePaths.ts
+│       │   ├── services/
+│       │   │   └── apiClient.ts
+│       │   ├── theme/
+│       │   │   ├── dark.ts
+│       │   │   ├── light.ts
+│       │   │   ├── ThemeProvider.tsx
+│       │   │   └── useTheme.ts
+│       │   ├── types/
+│       │   │   └── index.ts
+│       │   ├── utils/
+│       │   │   ├── constants.ts
+│       │   │   └── formatDate.ts
+│       │   ├── App.tsx
+│       │   ├── main.tsx
+│       │   └── vite-env.d.ts
+│       ├── .env.example
+│       ├── index.html
+│       ├── package.json
+│       ├── postcss.config.js
+│       ├── README.md
+│       ├── tailwind.config.ts
+│       ├── tsconfig.json
+│       └── vite.config.ts
+├── packages/
+│   ├── api-client/
+│   │   ├── src/
+│   │   │   ├── services/
+│   │   │   │   ├── assessmentService.ts
+│   │   │   │   ├── authService.ts
+│   │   │   │   ├── calendarService.ts
+│   │   │   │   ├── communityService.ts
+│   │   │   │   ├── dashboardService.ts
+│   │   │   │   ├── learningService.ts
+│   │   │   │   ├── messagesService.ts
+│   │   │   │   └── reportsService.ts
+│   │   │   ├── httpClient.ts
+│   │   │   └── index.ts
+│   │   └── package.json
+│   ├── shared-types/
+│   │   ├── src/
+│   │   │   ├── assessment.ts
+│   │   │   ├── dashboard.ts
+│   │   │   ├── index.ts
+│   │   │   ├── learner.ts
+│   │   │   └── user.ts
+│   │   ├── package.json
+│   │   └── tsconfig.json
+│   └── ui-tokens/
+│       ├── src/
+│       │   ├── colors.dark.ts
+│       │   ├── colors.light.ts
+│       │   ├── colors.ts
+│       │   ├── index.ts
+│       │   ├── spacing.ts
+│       │   └── typography.ts
+│       └── package.json
+├── .env.example
+├── .gitignore
+├── package.json
+├── PROJECT_TREE.txt
+├── README.md
+├── tsconfig.base.json
+└── turbo.json

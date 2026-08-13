@@ -1,0 +1,14 @@
+{
+  "name": "@edubridge/mobile",
+  "private": true,
+  "version": "0.1.0",
+  "description": "EduBridge Mobile App shell (Expo + React Native + TypeScript).",
+  "main": "index.ts",
+  "scripts": {
+    "start": "TODO: expo start",
+    "android": "TODO: expo start --android",
+    "ios": "TODO: expo start --ios"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

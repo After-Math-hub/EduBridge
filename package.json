@@ -1,0 +1,16 @@
+{
+  "name": "edubridge",
+  "private": true,
+  "version": "0.1.0",
+  "description": "EduBridge monorepo shell \u2014 apps/web (React+Vite+TS), apps/mobile (Expo React Native+TS), shared packages.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "TODO",
+    "dev:mobile": "TODO",
+    "build": "TODO",
+    "lint": "TODO"
+  }
+}

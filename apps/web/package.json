@@ -1,0 +1,13 @@
+{
+  "name": "@edubridge/web",
+  "private": true,
+  "version": "0.1.0",
+  "description": "EduBridge Web App shell (React + Vite + TypeScript + Tailwind).",
+  "scripts": {
+    "dev": "TODO: vite",
+    "build": "TODO: vite build",
+    "preview": "TODO: vite preview"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

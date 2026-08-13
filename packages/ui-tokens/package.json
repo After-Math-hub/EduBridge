@@ -1,0 +1,7 @@
+{
+  "name": "@edubridge/ui-tokens",
+  "private": true,
+  "version": "0.1.0",
+  "description": "EduBridge shared package shell: ui-tokens.",
+  "main": "src/index.ts"
+}
