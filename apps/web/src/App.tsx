@@ -1,2 +1,15 @@
-// App — shell only. TODO: implement.
-// Path: apps/web/src/App.tsx
+import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "./theme/ThemeProvider";
+import { AppRouter } from "./routes/AppRouter";
+
+function App() {
+  return (
+    <ThemeProvider>
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
+    </ThemeProvider>
+  );
+}
+
+export default App;

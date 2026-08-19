@@ -299,3 +299,67 @@ edubridge/
 └── turbo.json
 ```
 
+# EduBridge — Web App
+
+The EduBridge web application: Welcome/landing page and learner Dashboard,
+built from the approved design mockups (light mode + night mode).
+
+**Stack:** React 19 + TypeScript + Vite + Tailwind CSS v4 + React Router + lucide-react icons.
+
+## Getting started
+
+```bash
+npm install
+npm run dev       # start local dev server
+npm run build      # production build (runs tsc -b && vite build)
+npm run preview    # preview the production build
+```
+
+## What's implemented
+
+- **Theming** — `src/theme/ThemeProvider.tsx` provides a light/night mode
+  toggle (persisted to `localStorage`, respects OS preference on first
+  visit). Toggle lives in the top nav and the dashboard topbar.
+- **Welcome page** (`/`) — nav, hero with feature checklist, and the stats
+  strip (50K+ Active Learners / 2K+ Schools / 98% Satisfaction / 24/7 AI
+  Support), matching Option 4 (web, light) and its night-mode counterpart.
+- **Dashboard** (`/dashboard`) — sidebar navigation, topbar (search,
+  notifications, avatar), greeting header, Overall Progress / My Subjects /
+  Achievements cards, Continue Learning list and Upcoming list — matching
+  the combined dashboard mockup.
+- **Sidebar routes** (My Learning, Assessments, Reports, Calendar, Messages,
+  Community, Resources, Settings) render a shared "coming soon" placeholder
+  (`src/features/dashboard/ComingSoonPage.tsx`) so the whole nav is
+  click-through today; each is a real route ready to be built out.
+
+## Project structure
+
+```
+src/
+├── theme/                 Light/night mode provider + hook
+├── components/
+│   ├── common/             Button, Card, Badge, Avatar, ProgressBar,
+│   │                       ThemeToggle, BridgeLogo
+│   └── layout/              Sidebar, Topbar, DashboardLayout
+├── features/
+│   ├── welcome/             WelcomePage + Nav/Hero/Stats components
+│   └── dashboard/            DashboardPage + its cards, ComingSoonPage
+├── routes/                 AppRouter (all route definitions)
+├── App.tsx                 ThemeProvider + BrowserRouter + AppRouter
+├── main.tsx                 React entry point
+└── index.css                 Tailwind import + design tokens (@theme)
+```
+
+## Design tokens
+
+Colors, fonts and the night palette are defined once in `src/index.css`
+under the Tailwind v4 `@theme` block (`brand-*` purple, `accent-*` green,
+`ink-*` light-mode text, `night-*` dark backgrounds). Change them there to
+re-theme the whole app.
+
+## Next steps
+
+- Wire up real data via `@edubridge/api-client` (see the monorepo shell)
+  instead of the hard-coded sample data in the dashboard card components.
+- Build out the eight "coming soon" screens.
+- Add the Auth screens (Log in / Get Started forms).
